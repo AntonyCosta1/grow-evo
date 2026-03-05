@@ -25,11 +25,12 @@ export default function AuthPage() {
         options: { data: { username } },
       })
       if (signUpError) { setError(signUpError.message); setLoading(false); return }
-      setSuccess('Conta criada! Verifique seu e-mail para confirmar.')
+      setSuccess('Conta criada!')
     } else {
       const { error: signInError } = await supabase.auth.signInWithPassword({ email, password })
       if (signInError) { setError('E-mail ou senha incorretos.'); setLoading(false); return }
     }
+    window.location.href = "/dashboard"
     setLoading(false)
   }
 
