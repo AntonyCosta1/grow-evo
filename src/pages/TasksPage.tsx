@@ -8,7 +8,7 @@ import { Plus, CheckCircle2, Circle, Trash2, Flame, X } from 'lucide-react'
 
 export default function TasksPage() {
   const { tasks, createTask, completeTask, deleteTask } = useTaskStore()
-  const { addXp, incrementTasksCompleted, profile } = useProfileStore()
+  const { addXp, incrementTasksCompleted } = useProfileStore()
   const { user } = useAuthStore()
   const [showForm, setShowForm] = useState(false)
   const [filter, setFilter] = useState<'all' | Category>('all')
@@ -22,6 +22,7 @@ export default function TasksPage() {
       ...form,
       user_id: user.id,
       xp_reward: XP_BY_DIFFICULTY[form.difficulty],
+      is_active: true,
     })
     setForm({ title: '', description: '', category: 'health', frequency: 'daily', difficulty: 'medium' })
     setShowForm(false)

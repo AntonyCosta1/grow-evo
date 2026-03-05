@@ -96,7 +96,7 @@ export const useSocialStore = create<SocialState>((set, get) => ({
     const friends = (data ?? []).map((f: Record<string, unknown>) => {
       const isRequester = f.requester_id === userId
       return {
-        ...(f as Friendship),
+        ...(f as unknown as Friendship),
         profile: (isRequester ? f.addressee : f.requester) as Profile,
       }
     })
