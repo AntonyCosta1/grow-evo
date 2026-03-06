@@ -70,7 +70,9 @@ export const BADGES = [
   { id: 'tasks_50',     name: 'Incansável',      description: '50 tarefas completas',             icon: '🚀', condition: (completed: number) => completed >= 50 },
   { id: 'tasks_100',    name: 'Lendário',        description: '100 tarefas completas',            icon: '👑', condition: (completed: number) => completed >= 100 },
   { id: 'rank_bronze',  name: 'Bronze',          description: 'Alcançou o rank Bronze',           icon: '🥉', condition: (_: number, __: number, xp: number) => xp >= 500 },
+  { id: 'rank_silver',  name: 'Prata',           description: 'Alcançou o rank Silver',           icon: '🥈', condition: (_: number, __: number, xp: number) => xp >= 1500 },
   { id: 'rank_gold',    name: 'Ouro',            description: 'Alcançou o rank Gold',             icon: '🥇', condition: (_: number, __: number, xp: number) => xp >= 3500 },
+  { id: 'rank_diamond', name: 'Diamante',        description: 'Alcançou o rank Diamond',          icon: '💎', condition: (_: number, __: number, xp: number) => xp >= 7500 },
   { id: 'rank_master',  name: 'Master',          description: 'Alcançou o rank Master',          icon: '💎', condition: (_: number, __: number, xp: number) => xp >= 15000 },
 ]
 

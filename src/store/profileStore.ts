@@ -81,4 +81,6 @@ export const useProfileStore = create<ProfileState>((set, get) => ({
       .single()
     if (data) set({ profile: data })
   },
+
+  
 }))
