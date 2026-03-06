@@ -51,6 +51,7 @@ export const CATEGORY_META: Record<string, { label: string; color: string; icon:
   finance:      { label: 'Finanças',      color: '#34d399', icon: '💰' },
   fitness:      { label: 'Fitness',       color: '#f87171', icon: '💪' },
   academics: { label: 'Acadêmico',      color: '#67e8f9', icon: '📚' },
+  profissional: { label: 'Profissional',   color: '#fbbf24', icon: '💼' },
 }
 
 export const DIFFICULTY_META: Record<Difficulty, { label: string; color: string }> = {
