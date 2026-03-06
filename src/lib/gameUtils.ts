@@ -83,13 +83,19 @@ export function formatDate(dateStr: string): string {
 }
 
 export function isToday(dateStr: string): boolean {
-  const today = new Date().toISOString().split('T')[0]
-  return dateStr?.split('T')[0] === today
+  const today = new Date().toLocaleDateString('sv-SE')
+  const date = new Date(dateStr).toLocaleDateString('sv-SE')
+  return date === today
 }
 
 export function isYesterday(dateStr: string): boolean {
-  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0]
-  return dateStr?.split('T')[0] === yesterday
+  const yesterday = new Date()
+  yesterday.setDate(yesterday.getDate() - 1)
+
+  const y = yesterday.toLocaleDateString('sv-SE')
+  const date = new Date(dateStr).toLocaleDateString('sv-SE')
+
+  return date === y
 }
 
 export function getRankClass(rank: Rank): string {
